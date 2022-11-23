@@ -13,15 +13,16 @@ public class SnakeAndLadder {
 	 * @param args
 	 */
 	static int startPosition=0;
-public static void main(String args[]) {
-	/*
-	 * Printing welcome meassge.
-	 */
-	System.out.println("Enter the Number of players");
-	Scanner object=new Scanner(System.in);
-	int player1=object.nextInt();
-	player1=startPosition;
-	System.out.println("player1 Starting position = "+startPosition);
+	static int method1() {
+		int player1=startPosition;
+		int diceRoll=(int)Math.floor(Math.random()*10)%6+1;
+		player1=diceRoll;
+		return player1;
+	}
 	
+
+public static void main(String args[]) {
+	int player1=method1();
+	System.out.println(player1);
 }
 }
